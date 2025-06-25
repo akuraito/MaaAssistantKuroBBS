@@ -8,7 +8,7 @@
     ],
     "resource": [
         {
-            "name": "酷街区",
+            "name": "库街区",
             "path": [
                 "{PROJECT_DIR}/resource"
             ]

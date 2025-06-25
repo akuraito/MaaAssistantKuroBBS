@@ -5,17 +5,17 @@
 
 <div align="center">
 
-# Maa For KuJiequ
+# Maa Assistant KuroBBS
 
 </div>
 
-本项目是利用 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板并参考了 [MaaAssistantSkland](https://github.com/MaaXYZ/MaaAssistantSkland) 而出生的 [酷街区](https://www.kurobbs.com) 小助手。
+本项目是利用 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板并参考了 [MaaAssistantSkland](https://github.com/MaaXYZ/MaaAssistantSkland) 而出生的 [库街区](https://www.kurobbs.com) 小助手。
 
 当前仅实现了特定场景下的战双每日签到
 
 ## 即刻开始
 
-- 项目下载：[Releases](https://github.com/akuraito/Maa_For_KuJiequ/releases)
+- 项目下载：[Releases](https://github.com/akuraito/MaaAssistantKuroBBS/releases)
 - 适配参考：[模拟器支持情况](https://maa.plus/docs/zh-cn/manual/device/)
 - 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用参考：[作为MAA结束后脚本使用](https://github.com/MaaXYZ/MaaAssistantSkland?tab=readme-ov-file#作为MAA结束后脚本使用)
 
@@ -28,4 +28,4 @@
 
 感谢以下开发者对本项目作出的贡献:
 
-[![Contributors](https://contrib.rocks/image?repo=akuraito/Maa_For_KuJiequ&max=1000)](https://github.com/akuraito/Maa_For_KuJiequ/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=akuraito/MaaAssistantKuroBBS&max=1000)](https://github.com/akuraito/MaaAssistantKuroBBS/graphs/contributors)
