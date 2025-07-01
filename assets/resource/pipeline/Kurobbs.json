@@ -4,9 +4,11 @@
             "StartApp"
         ],
         "interrupt":[
+            "SkipAD",
             "Update",
+            "ChildMode",
             "PopUp",
-            "ChildMode"
+            "HomeBar"
         ]
     },
     "PGR":{
@@ -19,24 +21,60 @@
     },
     "StartApp":{
         "action": "StartApp",
-        "package": "com.kurogame.kjq"
+        "package": "com.kurogame.kjq/com.kurogame.kjq.userlogin.ui.activity.SplashActivity",
+        "next":[
+            "SkipAD",
+            "Update",
+            "ChildMode",
+            "PopUp",
+            "HomeBar"
+        ]
+    },
+    "SkipAD":{
+        "recognition": "OCR",
+        "expected": [
+            "跳过"
+        ],
+        "action": "Click",
+        "next":[
+            "Update"
+        ]
     },
     "Update":{
         "recognition": "OCR",
         "expected": [
             "取消"
         ],
-        "action": "Click"
-    },
-    "PopUp":{
-        "recognition": "TemplateMatch",
-        "template": "PopUpClose.png",
-        "action": "Click"
+        "action": "Click",
+        "next":[
+            "ChildMode"
+        ]
     },
     "ChildMode":{
         "recognition": "OCR",
         "expected": [
             "我知道了"
+        ],
+        "action": "Click",
+        "next":[
+            "PopUp"
+        ]
+    },
+    "PopUp":{
+        "recognition": "TemplateMatch",
+        "template": "PopUpClose.png",
+        "roi": [
+            619,
+            53,
+            75,
+            75
+        ],
+        "action": "Click"
+    },
+    "HomeBar":{
+        "recognition": "OCR",
+        "expected": [
+            "首页"
         ],
         "action": "Click"
     },
@@ -44,6 +82,12 @@
         "recognition": "OCR",
         "expected": [
             "战双帕弥什"
+        ],
+        "roi": [
+            100,
+            100,
+            600,
+            70
         ],
         "action": "Click",
         "next":[
@@ -63,18 +107,21 @@
     "SignZonePGRSupply":{
         "action": "Swipe",
         "begin": [
-            90, 1300, 110, 80
+            90, 800, 80, 80
         ],
         "end": [
-            90, 200, 110, 80
+            90, 200, 80, 80
         ],
+        "duration": 500,
         "next":[
             "SupplyPGR"
         ]
     },
     "SupplyPGR":{
         "recognition": "FeatureMatch",
-        "template": "SupplyPGR.png",
+        "template":[
+            "SupplyPGR.png"
+        ],
         "action": "Click"
     }
 }

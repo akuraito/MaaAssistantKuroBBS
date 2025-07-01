@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD033 MD041 -->
-<p align="center">
-  <img alt="LOGO还没有" src="" width="125" height="125"/>
-</p>
 
 <div align="center">
 
