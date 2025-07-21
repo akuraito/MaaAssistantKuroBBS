@@ -2,8 +2,7 @@
     "controller": [
         {
             "name": "Adb",
-            "type": "Adb",
-            "screencap": 16580608
+            "type": "Adb"
         }
     ],
     "resource": [
@@ -15,10 +14,6 @@
         }
     ],
     "task": [
-        {
-            "name": "启动",
-            "entry": "Kurobbs"
-        },
         {
             "name": "战双帕弥什签到",
             "entry": "PGR"

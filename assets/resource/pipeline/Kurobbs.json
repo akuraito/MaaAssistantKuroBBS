@@ -1,33 +1,17 @@
 {
-    "Kurobbs":{
-        "next": [
-            "StartApp"
-        ],
-        "interrupt":[
-            "SkipAD",
-            "Update",
-            "ChildMode",
-            "PopUp",
-            "HomeBar"
-        ]
-    },
     "PGR":{
-        "next":[
-            "TopbarPGR",
-            "DailySupply",
-            "SignZonePGRSupply",
-            "SupplyPGR"
-        ]
-    },
-    "StartApp":{
         "action": "StartApp",
         "package": "com.kurogame.kjq/com.kurogame.kjq.userlogin.ui.activity.SplashActivity",
         "next":[
             "SkipAD",
             "Update",
             "ChildMode",
+            "HomeBar", 
             "PopUp",
-            "HomeBar"
+            "TopbarPGR",
+            "DailySupply",
+            "SignZonePGRSupply",
+            "SupplyPGR"
         ]
     },
     "SkipAD":{
@@ -37,17 +21,29 @@
         ],
         "action": "Click",
         "next":[
-            "Update"
+            "Update",
+            "ChildMode",
+            "HomeBar",
+            "PopUp"
         ]
     },
     "Update":{
         "recognition": "OCR",
         "expected": [
-            "取消"
+            "暂不更新"
+        ],
+        "roi": [
+            40,
+            748,
+            360,
+            206
         ],
         "action": "Click",
         "next":[
-            "ChildMode"
+            "Update",
+            "ChildMode",
+            "HomeBar",
+            "PopUp"
         ]
     },
     "ChildMode":{
@@ -57,7 +53,30 @@
         ],
         "action": "Click",
         "next":[
+            "Update",
+            "ChildMode",
+            "HomeBar",
             "PopUp"
+        ]
+    },
+    "HomeBar":{
+        "recognition": "OCR",
+        "expected": [
+            "首页",
+            "回到顶部"
+        ],
+        "roi": [
+            0,
+            1186,
+            171,
+            94
+        ],
+        "action": "Click",
+        "next":[
+            "Update",
+            "PopUp",
+            "TopbarPGR",
+            "HomeBar"
         ]
     },
     "PopUp":{
@@ -69,19 +88,17 @@
             75,
             75
         ],
-        "action": "Click"
-    },
-    "HomeBar":{
-        "recognition": "OCR",
-        "expected": [
-            "首页"
-        ],
-        "action": "Click"
+        "action": "Click",
+        "next":[
+            "TopbarPGR"
+        ]
     },
     "TopbarPGR":{
         "recognition": "OCR",
         "expected": [
-            "战双帕弥什"
+            "战双",
+            "帕弥",
+            "什"
         ],
         "roi": [
             100,
@@ -105,6 +122,10 @@
         ]
     },
     "SignZonePGRSupply":{
+        "recognition": "OCR",
+        "expected": [
+            "每日签到"
+        ],
         "action": "Swipe",
         "begin": [
             90, 800, 80, 80
@@ -122,6 +143,8 @@
         "template":[
             "SupplyPGR.png"
         ],
-        "action": "Click"
-    }
+        "action": "Click",
+        "next": "Stop"
+    },
+    "Stop":{}
 }
