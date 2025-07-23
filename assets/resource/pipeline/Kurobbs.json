@@ -139,12 +139,9 @@
         ]
     },
     "SupplyPGR":{
-        "recognition": "FeatureMatch",
-        "template":[
-            "SupplyPGR.png"
-        ],
-        "action": "Click",
-        "next": "Stop"
-    },
-    "Stop":{}
+        "recognition": "ColorMatch",
+        "lower":[120, 180, 200],
+        "upper":[160, 220, 255],
+        "action": "Click"
+    }
 }
