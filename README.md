@@ -33,7 +33,7 @@
 
 ### 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用
 
-打开 MAA_Punish 的 `资源设置`-`自定义启动`，在 `结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
+在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
 
 - 若选择 `MaaPiCli.exe`，在 MAA_Punish `运行参数` 中填入 `-d` 可跳过交互直接运行任务
 - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
@@ -75,7 +75,7 @@
 
 ## Q&A
 
-Q：为什么我的酷街区APP掉登录？
+Q：为什么我的库街区APP掉登录？
 
 A：同一账号只能同时登录一个库街区APP，请勿在其他库街区APP中再次登录。
 
@@ -86,6 +86,10 @@ A：通常是因为~~每月签到页换颜色~~、临时的七日签到增加奖
 Q：会支持多个战双账号签到、库街区自身的签到吗？
 
 A：不会。
+
+Q：`MaaPiCli.exe` 可否在结束后打开其他软件？
+
+A：不行，仅 `MFAAvalonia.exe` 可以结束后打开其他软件。
 
 ## 开发
 
