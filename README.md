@@ -25,7 +25,7 @@
 压缩包文件中应包含 `MaaPiCli.exe`（命令行界面）与 `MFAAvalonia.exe`（图形化界面），可以选择其一使用。
 
 - 命令行界面
-  1. 首次使用，打开模拟器，双击打开 MaaPiCli.exe 或 通过 CMD 执行 MaaPiCli.exe
+  1. 首次使用，打开模拟器，双击打开 `MaaPiCli.exe` 或 通过 CMD 执行 `MaaPiCli.exe`
   1. 选择ADB（本教程以 Auto detect 为例）
   1. 等待扫描设备（设备越多等待时间越长）
   1. 选择需要连接的设备
@@ -33,10 +33,10 @@
 
 ### 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用
 
-打开 `资源设置`-`自定义启动`，在 `结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
+打开 MAA_Punish 的 `资源设置`-`自定义启动`，在 `结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
 
 - 若选择 `MaaPiCli.exe`，在 MAA_Punish `运行参数` 中填入 `-d` 可跳过交互直接运行任务
-- 若选择  `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
+- 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
 
 如需要一天只运行一次：
 
@@ -69,7 +69,7 @@
 
 1. 将文本文件重命名为 `finish.bat`
 
-    > 如果重命名后没有弹出修改扩展名的二次确认对话框，且文件图标没有变化，请自行搜索“Windows如何显示文件扩展名”。
+    > 如果重命名后没有弹出修改扩展名的二次确认对话框，且文件图标没有变化，请自行搜索“Windows如何显示文件扩展名”
 
 1. 在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `finish.bat`
 
@@ -77,7 +77,7 @@
 
 Q：为什么我的酷街区APP掉登录？
 
-A：同一账号只能同时登录一个库街区APP，请勿在其他库街区APP中再次登录或使用库街区网页。
+A：同一账号只能同时登录一个库街区APP，请勿在其他库街区APP中再次登录。
 
 Q：怎么突然用不了？
 
