@@ -1,123 +1,130 @@
 <!-- markdownlint-disable MD033 MD041 -->
-<p align="center">
-  <img alt="LOGO" src="https://cdn.jsdelivr.net/gh/MaaAssistantArknights/design@main/logo/maa-logo_512x512.png" width="256" height="256" />
-</p>
 
 <div align="center">
 
-# MaaPracticeBoilerplate
+# MaaAssistantKuroBBS
 
 </div>
 
-本仓库为 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板，开发者可基于此模板直接创建自己的 MaaXXX 项目。
+本项目是利用 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板并参考了 [MaaAssistantSkland](https://github.com/MaaXYZ/MaaAssistantSkland) 而出生的 [库街区](https://www.kurobbs.com) 小助手。
 
-> **MaaFramework** 是基于图像识别技术、运用 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 开发经验去芜存菁、完全重写的新一代自动化黑盒测试框架。
-> 低代码的同时仍拥有高扩展性，旨在打造一款丰富、领先、且实用的开源库，助力开发者轻松编写出更好的黑盒测试程序，并推广普及。
+当前仅实现战双每日签到，如需鸣潮每日签到，请使用 [MaaMihoyoBBS](https://github.com/shawn01234/MaaMihoyoBBS)。
 
 ## 即刻开始
 
-- [📄 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
-- [🎞️ 视频教程](https://www.bilibili.com/video/BV1yr421E7MW)
+  > 以 Windows 用户为主，其他系统请照葫芦画瓢。
 
-## 如何开发
+- 模拟器准备：
+  1. 将模拟器分辨率修改为 `1280x720 320dpi` 或 `1920x1080 480dpi`（推荐）（[模拟器支持情况参考](https://maa.plus/docs/zh-cn/manual/device/)）
+  1. 使用移动页面打开[库街区APP下载页](https://www.kurobbs.com/download.html)并下载库街区APP（如模拟器自带的浏览器、或使用 Chrome 浏览器的[模拟移动设备功能](https://developer.chrome.google.cn/docs/devtools/device-mode?hl=zh-cn)）
+  1. 在模拟器上安装并登录库街区APP
+- MaaAssistantKuroBBS 准备：
+  1. 下载对应平台的压缩包：[Releases](https://github.com/akuraito/MaaAssistantKuroBBS/releases)
+  1. 将压缩包解压到没有中文的目录下
 
-0. 使用右上角 `Use this template` - `Create a new repository` 来基于本模板创建您自己的项目。
+压缩包文件中应包含 `MaaPiCli.exe`（命令行界面）与 `MFAAvalonia.exe`（图形化界面），可以选择其一使用。
 
-1. 克隆本项目及子项目（地址请修改为您基于本模板创建的新项目地址）。
+- 命令行界面
+  1. 首次使用，打开模拟器，双击打开 `MaaPiCli.exe` 或 通过 CMD 执行 `MaaPiCli.exe`
+  1. 选择ADB（本教程以 Auto detect 为例）
+  1. 等待扫描设备（设备越多等待时间越长）
+  1. 选择需要连接的设备
+  1. 开始使用吧！
 
-    ```bash
-    git clone https://github.com/MaaXYZ/MaaPracticeBoilerplate.git
+### 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用
+
+在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
+
+- 若选择 `MaaPiCli.exe`，在 MAA_Punish `运行参数` 中填入 `-d` 可跳过交互直接运行任务
+- 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
+
+如需要一天只运行一次：
+
+1. 在 MaaAssistantKuroBBS 目录中新建文本文件，在其中填入以下内容：
+
+    ```bat
+    @echo off
+    cd D:/Software/MaaAssistantKuroBBS
+    set "date_file=last_run_date.txt"
+    if not exist "%date_file%" (
+        MaaPiCli.exe -d
+        echo %date% > "%date_file%"
+        exit
+    )
+
+    set /p last_run_date=<"%date_file%"
+    set "last_run_date=%last_run_date: =%"
+
+    set current_date=%date%
+    set "current_date=%current_date: =%"
+
+    if %current_date% neq %last_run_date% (
+        MaaPiCli.exe -d
+        echo %current_date% > "%date_file%"
+    )
+    exit
     ```
 
-2. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中。
+    > 注意：`D:/Software/MaaAssistantKuroBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
 
-3. 下载通用资源子模块（MaaCommonAssets）
+1. 将文本文件重命名为 `finish.bat`
 
-    ```bash
-    git submodule update --init --recursive
-    ```
+    > 如果重命名后没有弹出修改扩展名的二次确认对话框，且文件图标没有变化，请自行搜索“Windows如何显示文件扩展名”
 
-    请注意，子模块仓库体积较大，请确认您已经成功下载，否则后续 OCR（文字识别）将报错并无识别结果。  
-    若 git 命令始终无法成功下载，也可尝试前往 [Mirror酱](https://mirrorchyan.com/zh/projects?rid=MaaCommonAssets&source=ghtempl-readme) 手动下载后解压到 `assets/MaaCommonAssets` 文件夹中，目录结构为 `assets/MaaCommonAssets/OCR`。
+1. 在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `finish.bat`
 
-4. 配置资源文件。
+## Q&A
 
-    ```bash
-    python ./configure.py
-    ```
+Q：为什么我的库街区APP掉登录？
 
-    若报错 `File Not Found: XXXXXX`，则说明上一步 MaaCommonAssets 未正常下载，请再次检查！
+A：同一账号只能同时登录一个库街区APP，请勿在其他库街区APP中再次登录。
 
-5. 进行开发工作，按您的业务需求修改 `assets` 中的资源文件，请参考 [MaaFramework 相关文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md#%E8%B5%84%E6%BA%90%E5%87%86%E5%A4%87)。
+Q：怎么突然用不了？
 
-6. 完成开发后，上传您的代码并发布版本。
+A：通常是因为~~每月签到页换颜色~~、临时的七日签到增加奖励等造成的页面变化，请等待更新。
 
-    ```bash
-    # 配置 git 信息（仅第一次需要，后续不用再配置）
-    git config user.name "您的 GitHub 昵称"
-    git config user.email "您的 GitHub 邮箱"
-    
-    # 提交修改
-    git add .
-    git commit -m "XX 新功能"
-    git push origin HEAD -u
-    ```
+Q：会支持多个战双账号签到、库街区自身的签到吗？
 
-7. 发布您的版本
+A：不会。
 
-    需要**先**修改仓库设置 `Settings` - `Actions` - `General` - `Read and write permissions` - `Save`
+Q：`MaaPiCli.exe` 可否在结束后打开其他软件？
+
+A：不行，仅 `MFAAvalonia.exe` 可以结束后打开其他软件。
+
+## 开发
+
+**如果你要编译源码才看这节，否则直接 [下载](https://github.com/akuraito/MaaAssistantKuroBBS/releases) 即可**
+
+_欢迎大佬们来带带~_
+
+1. 完整克隆本项目及子项目
 
     ```bash
-    # CI 检测到 tag 会自动进行发版
-    git tag v1.0.0
-    git push origin v1.0.0
+    git clone --recursive https://github.com/akuraito/MaaAssistantKuroBBS.git
     ```
 
-8. 更多操作，请参考 [个性化配置](./docs/zh_cn/个性化配置.md)（可选）
+1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
+1. 安装
 
-## 生态共建
+    ```bash
+    python install.py
+    ```
 
-MAA 正计划建设为一类项目，而非舟的单一软件。
+    安装的二进制及相关资源文件在 `install` 目录下
 
-若您的项目依赖于 MaaFramework，我们欢迎您将它命名为 MaaXXX, MXA, MAX 等等。当然，这是许可而不是限制，您也可以自由选择其他与 MAA 无关的名字，完全取决于您自己的想法！
+## 开发相关
 
-同时，我们也非常欢迎您提出 PR，在 [社区项目列表](https://github.com/MaaXYZ/MaaFramework#%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE) 中添加上您的项目！
-
-## FAQ
-
-### 0. 我是第一次使用 git，这是什么？视频演示中那个黑框框命令行哪来的？
-
-黑框框是 git bash，几乎任何现代软件的开发都离不开 git，建议先参考 [菜鸟教程](https://www.runoob.com/git/git-install-setup.html) 或搜索一些视频，学习完 git 后再来进行后续开发工作。
-
-### 1. 我是第一次使用 Python，在命令行输入 `python ./configure.py` 或 `python -m pip install MaaFW` 之后没有反应？没有报错，也没有提示成功，什么都没有
-
-Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安装器，是没法用的。  
-你需要做的是关闭它或者删除它的环境变量，然后自己去 Python 官网下载并安装一份 Python。  
-[参考方法](https://www.bilibili.com/read/cv24692025/)
-
-### 2. 使用 MaaDebugger 或 MaaPicli 时弹窗报错，应用程序错误：应用程序无法正常启动
-
-![缺少运行库](https://github.com/user-attachments/assets/942df84b-f47d-4bb5-98b5-ab5d44bc7c2a)
-
-一般是电脑缺少某些运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe) 。
-
-### 3. 我在这个仓库里提了 Issue 很久没人回复
-
-这里是《项目模板》仓库，它仅仅是一个模板，一般很少会修改，开发者也较少关注。  
-在此仓库请仅提问模板相关问题，其他问题最好前往对应的仓库提出，如果有 log，最好也带上它（`debug/maa.log` 文件）
-
-- MaaFW 本身及 MaaPiCli 的问题：[MaaFramework/issues](https://github.com/MaaXYZ/MaaFramework/issues)
-- MaaDebugger 的问题：[MaaDebugger/issues](https://github.com/MaaXYZ/MaaDebugger/issues)
-- 不知道算是哪里的、其他疑问等：[讨论区](https://github.com/MaaXYZ/MaaFramework/discussions)
-
-### 4. OCR 文字识别一直没有识别结果，报错 "Failed to load det or rec", "ocrer_ is null"
-
-**请仔细阅读文档**，你无视了前面步骤的报错。我不想解释了，请再把本文档仔细阅读一遍！
+- `deps/tools/ImageCropper` 可以用来裁剪图片和获取 ROI
+- Pipeline 协议请参考 [MaaFramework 的文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
 
 ## 鸣谢
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+  > **MaaFramework** 是基于图像识别技术、运用 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 开发经验去芜存菁、完全重写的新一代自动化黑盒测试框架。
+  >
+  > 低代码的同时仍拥有高扩展性，旨在打造一款丰富、领先、且实用的开源库，助力开发者轻松编写出更好的黑盒测试程序，并推广普及。
 
-[![Contributors](https://contrib.rocks/image?repo=MaaXYZ/MaaFramework&max=1000)](https://github.com/MaaXYZ/MaaFramework/graphs/contributors)
+感谢以下开发者对本项目作出的贡献：
+
+[![Contributors](https://contrib.rocks/image?repo=akuraito/MaaAssistantKuroBBS&max=1000)](https://github.com/akuraito/MaaAssistantKuroBBS/graphs/contributors)
