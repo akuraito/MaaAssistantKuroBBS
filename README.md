@@ -35,7 +35,7 @@
 
 在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，点击按钮并选择 MaaAssistantKuroBBS 目录中的 `MaaPiCli.exe` 或 `MFAAvalonia.exe`。
 
-- 若选择 `MaaPiCli.exe`，在 MAA_Punish `运行参数` 中填入 `-d` 可跳过交互直接运行任务
+- 若选择 `MaaPiCli.exe`，在 下方 `运行参数` 中填入 `-d` 可跳过交互直接运行任务
 - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
 
 如需要一天只运行一次：
@@ -44,7 +44,7 @@
 
     ```bat
     @echo off
-    cd D:/Software/MaaAssistantKuroBBS
+    cd D:/Software/MAKBBS
     set "date_file=last_run_date.txt"
     if not exist "%date_file%" (
         MaaPiCli.exe -d
@@ -65,7 +65,7 @@
     exit
     ```
 
-    > 注意：`D:/Software/MaaAssistantKuroBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
+    > 注意：`D:/Software/MaaAssistantKuroBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录；`MaaPiCli.exe` 可替换为 `MFAAvalonia.exe`
 
 1. 将文本文件重命名为 `finish.bat`
 
