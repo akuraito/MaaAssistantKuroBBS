@@ -15,8 +15,8 @@
             "TopbarPGR",
             "DailySupply",
             "SupplyPGR",
-            "SignZonePGR",
-            "SupplyPGRDone"
+            "SupplyPGRDone",
+            "SignZonePGR"
         ]
     },
     "SkipAD": {
@@ -150,9 +150,10 @@
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [220, 200, 140],
-                "upper": [230, 210, 150],
-                "connected": true
+                "lower": [220, 200, 70],
+                "upper": [240, 220, 80],
+                "connected": true,
+                "count": 40
             }
         },
         "action": {
@@ -162,26 +163,6 @@
         "next": [
             "SupplyPGRDone",
             "SignZonePGR"
-        ]
-    },
-    "SignZonePGR": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["《战双帕弥什》每日签到"],
-                "roi": [180, 100, 380, 80]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [90, 800, 80, 80],
-                "end": [90, 200, 80, 80],
-                "duration": 500
-            }
-        },
-        "next": [
-            "SupplyPGR"
         ]
     },
     "SupplyPGRDone": {
@@ -198,5 +179,24 @@
                 "package": "com.kurogame.kjq"
             }
         }
+    },
+    "SignZonePGR": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["领取记录"]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [90, 800, 80, 80],
+                "end": [90, 200, 80, 80],
+                "duration": 500
+            }
+        },
+        "next": [
+            "SupplyPGR"
+        ]
     }
 }
