@@ -15,8 +15,16 @@
     ],
     "task": [
         {
-            "name": "战双帕弥什签到",
+            "name": "战双每日签到",
             "entry": "PGR"
+        },
+        {
+            "name": "鸣潮每日签到",
+            "entry": "WUWA"
+        },
+        {
+            "name": "关闭库街区",
+            "entry": "StopAPPKuroBBS"
         }
     ]
 }

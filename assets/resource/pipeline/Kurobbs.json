@@ -1,25 +1,88 @@
 {
     "PGR": {
+        "next": [
+            "DailySupplyPGR"
+        ],
+        "interrupt": [
+            "SupplyDone",
+            "ExitSupplyPage",
+            "AD",
+            "Update",
+            "ChildMode",
+            "PopUp",
+            "TopbarPGR",
+            "HomeBar",
+            "StartAPPKuroBBS"
+        ]
+    },
+    "WUWA": {
+        "next": [
+            "DailySupplyWUWA"
+        ],
+        "interrupt": [
+            "SupplyDone",
+            "ExitSupplyPage",
+            "AD",
+            "Update",
+            "ChildMode",
+            "PopUp",
+            "TopbarWUWA",
+            "HomeBar",
+            "StartAPPKuroBBS"
+        ]
+    },
+    "StartAPPKuroBBS" :{
         "action": {
             "type": "StartApp",
             "param": {
                 "package": "com.kurogame.kjq/com.kurogame.kjq.userlogin.ui.activity.SplashActivity"
             }
-        },
-        "next": [
-            "SkipAD",
-            "Update",
-            "ChildMode",
-            "HomeBar",
-            "PopUp",
-            "TopbarPGR",
-            "DailySupply",
-            "SupplyPGR",
-            "SupplyPGRDone",
-            "SignZonePGR"
-        ]
+        }
     },
-    "SkipAD": {
+    "StopAPPKuroBBS" :{
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.kurogame.kjq"
+            }
+        },
+        "next": []
+    },
+    "SupplyDone": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["签到成功"],
+                "roi": [250, 250, 250, 80]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [340, 1140, 40, 40]
+            }
+        }
+    },
+    "ExitSupplyPage": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "《战双帕弥什》每日签到",
+                    "《鸣潮》每日签到工具",
+                    "每日签到"
+                ],
+                "roi": [0, 100, 720, 60]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [40, 120, 30, 30]
+            }
+        }
+    },
+    "AD": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -30,13 +93,7 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": [
-            "Update",
-            "ChildMode",
-            "HomeBar",
-            "PopUp"
-        ]
+        }
     },
     "Update": {
         "recognition": {
@@ -49,12 +106,7 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": [
-            "ChildMode",
-            "HomeBar",
-            "PopUp"
-        ]
+        }
     },
     "ChildMode": {
         "recognition": {
@@ -67,13 +119,20 @@
         "action": {
             "type": "Click",
             "param": {}
+        }
+    },
+    "PopUp": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "PopUpClose.png",
+                "roi": [600, 40, 100, 100]
+            }
         },
-        "next": [
-            "Update",
-            "ChildMode",
-            "HomeBar",
-            "PopUp"
-        ]
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
     },
     "HomeBar": {
         "recognition": {
@@ -89,47 +148,41 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": [
-            "Update",
-            "PopUp",
-            "TopbarPGR",
-            "HomeBar"
-        ]
-    },
-    "PopUp": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "PopUpClose.png",
-                "roi": [600, 40, 100, 100]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "TopbarPGR"
-        ]
+        }
     },
     "TopbarPGR": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ["战双"],
+                "expected": [
+                    "战双帕弥什",
+                    "战双"
+                ],
                 "roi": [100, 100, 500, 80]
             }
         },
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": [
-            "DailySupply"
-        ]
+        }
     },
-    "DailySupply": {
+    "TopbarWUWA": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "鸣潮",
+                    "呜潮"
+                ],
+                "roi": [100, 100, 500, 80]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "DailySupplyPGR": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -141,6 +194,7 @@
             "type": "Click",
             "param": {}
         },
+        "post_delay": 500,
         "next": [
             "SupplyPGR",
             "SignZonePGR"
@@ -151,34 +205,16 @@
             "type": "ColorMatch",
             "param": {
                 "lower": [220, 200, 70],
-                "upper": [240, 220, 80],
+                "upper": [240, 220, 150],
                 "connected": true,
-                "count": 40
+                "count": 55
             }
         },
         "action": {
             "type": "Click",
             "param": {}
         },
-        "next": [
-            "SupplyPGRDone",
-            "SignZonePGR"
-        ]
-    },
-    "SupplyPGRDone": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["签到成功"],
-                "roi": [250, 250, 250, 80]
-            }
-        },
-        "action": {
-            "type": "StopApp",
-            "param": {
-                "package": "com.kurogame.kjq"
-            }
-        }
+        "next": []
     },
     "SignZonePGR": {
         "recognition": {
@@ -195,8 +231,57 @@
                 "duration": 500
             }
         },
+        "next": ["SupplyPGR"]
+    },
+    "DailySupplyWUWA": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["签到奖励"],
+                "roi": [250, 700, 160, 100]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 500,
         "next": [
-            "SupplyPGR"
+            "SignZoneWUWA",
+            "SupplyWUWA"
+        ]
+    },
+    "SupplyWUWA": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["领"]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": []
+    },
+    "SignZoneWUWA": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["领取记录"]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [90, 800, 80, 80],
+                "end": [90, 200, 80, 80],
+                "duration": 500
+            }
+        },
+        "next": [
+            "SignZoneWUWA",
+            "SupplyWUWA"
         ]
     }
 }
