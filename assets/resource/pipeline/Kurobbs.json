@@ -166,6 +166,21 @@
             "param": {}
         }
     },
+    "ErrorPopup": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["说点什么吧"],
+                "roi": [30, 1200, 400, 80]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [40, 120, 30, 30]
+            }
+        }
+    },
     "TopbarWUWA": {
         "recognition": {
             "type": "OCR",
@@ -197,7 +212,12 @@
         "post_delay": 500,
         "next": [
             "SupplyPGR",
-            "SignZonePGR"
+            "SignZonePGR",
+            "DailySupplyPGR"
+        ],
+        "interrupt": [
+            "ErrorPopup",
+            "Update"
         ]
     },
     "SupplyPGR": {
@@ -248,7 +268,12 @@
         "post_delay": 500,
         "next": [
             "SignZoneWUWA",
-            "SupplyWUWA"
+            "SupplyWUWA",
+            "DailySupplyWUWA"
+        ],
+        "interrupt": [
+            "ErrorPopup",
+            "Update"
         ]
     },
     "SupplyWUWA": {
