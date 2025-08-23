@@ -1,5 +1,6 @@
 {
     "PGR": {
+        "post_wait_freezes": 500,
         "next": [
             "DailySupplyPGR"
         ],
@@ -16,6 +17,7 @@
         ]
     },
     "WUWA": {
+        "post_wait_freezes": 500,
         "next": [
             "DailySupplyWUWA"
         ],
