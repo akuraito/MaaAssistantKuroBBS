@@ -13,6 +13,7 @@
             "PopUp",
             "TopbarPGR",
             "HomeBar",
+            "ErrorPopup",
             "StartAPPKuroBBS"
         ]
     },
@@ -30,6 +31,7 @@
             "PopUp",
             "TopbarWUWA",
             "HomeBar",
+            "ErrorPopup",
             "StartAPPKuroBBS"
         ]
     },
@@ -152,6 +154,21 @@
             "param": {}
         }
     },
+    "ErrorPopup": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["说点什么吧"],
+                "roi": [30, 1200, 400, 80]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [40, 120, 30, 30]
+            }
+        }
+    },
     "TopbarPGR": {
         "recognition": {
             "type": "OCR",
@@ -166,21 +183,6 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
-    },
-    "ErrorPopup": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["说点什么吧"],
-                "roi": [30, 1200, 400, 80]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [40, 120, 30, 30]
-            }
         }
     },
     "TopbarWUWA": {
