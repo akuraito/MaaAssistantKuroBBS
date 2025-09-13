@@ -11,9 +11,9 @@
             "Update",
             "ChildMode",
             "PopUp",
+            "ErrorPopup",
             "TopbarPNS",
             "HomeBar",
-            "ErrorPopup",
             "StartAPPKuroBBS"
         ]
     },
@@ -29,9 +29,9 @@
             "Update",
             "ChildMode",
             "PopUp",
+            "ErrorPopup",
             "TopbarMC",
             "HomeBar",
-            "ErrorPopup",
             "StartAPPKuroBBS"
         ]
     },
