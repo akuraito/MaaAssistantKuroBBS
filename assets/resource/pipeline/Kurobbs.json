@@ -61,9 +61,9 @@
             }
         },
         "action": {
-            "type": "Click",
+            "type": "ClickKey",
             "param": {
-                "target": [340, 1140, 40, 40]
+                "key": [4]
             }
         }
     },
@@ -80,9 +80,9 @@
             }
         },
         "action": {
-            "type": "Click",
+            "type": "ClickKey",
             "param": {
-                "target": [40, 120, 30, 30]
+                "key": [4]
             }
         }
     },
@@ -163,9 +163,9 @@
             }
         },
         "action": {
-            "type": "Click",
+            "type": "ClickKey",
             "param": {
-                "target": [40, 120, 30, 30]
+                "key": [4]
             }
         }
     },
