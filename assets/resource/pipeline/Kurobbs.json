@@ -1,8 +1,8 @@
 {
-    "PGR": {
+    "PNS": {
         "post_wait_freezes": 500,
         "next": [
-            "DailySupplyPGR"
+            "DailySupplyPNS"
         ],
         "interrupt": [
             "SupplyDone",
@@ -11,16 +11,16 @@
             "Update",
             "ChildMode",
             "PopUp",
-            "TopbarPGR",
+            "TopbarPNS",
             "HomeBar",
             "ErrorPopup",
             "StartAPPKuroBBS"
         ]
     },
-    "WUWA": {
+    "MC": {
         "post_wait_freezes": 500,
         "next": [
-            "DailySupplyWUWA"
+            "DailySupplyMC"
         ],
         "interrupt": [
             "SupplyDone",
@@ -29,7 +29,7 @@
             "Update",
             "ChildMode",
             "PopUp",
-            "TopbarWUWA",
+            "TopbarMC",
             "HomeBar",
             "ErrorPopup",
             "StartAPPKuroBBS"
@@ -169,7 +169,7 @@
             }
         }
     },
-    "TopbarPGR": {
+    "TopbarPNS": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -185,7 +185,7 @@
             "param": {}
         }
     },
-    "TopbarWUWA": {
+    "TopbarMC": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -201,7 +201,7 @@
             "param": {}
         }
     },
-    "DailySupplyPGR": {
+    "DailySupplyPNS": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -215,16 +215,16 @@
         },
         "post_delay": 500,
         "next": [
-            "SupplyPGR",
-            "SignZonePGR",
-            "DailySupplyPGR"
+            "SupplyPNS",
+            "SignZonePNS",
+            "DailySupplyPNS"
         ],
         "interrupt": [
             "ErrorPopup",
             "Update"
         ]
     },
-    "SupplyPGR": {
+    "SupplyPNS": {
         "recognition": {
             "type": "ColorMatch",
             "param": {
@@ -240,7 +240,7 @@
         },
         "next": []
     },
-    "SignZonePGR": {
+    "SignZonePNS": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -255,9 +255,9 @@
                 "duration": 500
             }
         },
-        "next": ["SupplyPGR"]
+        "next": ["SupplyPNS"]
     },
-    "DailySupplyWUWA": {
+    "DailySupplyMC": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -271,16 +271,16 @@
         },
         "post_delay": 500,
         "next": [
-            "SignZoneWUWA",
-            "SupplyWUWA",
-            "DailySupplyWUWA"
+            "SignZoneMC",
+            "SupplyMC",
+            "DailySupplyMC"
         ],
         "interrupt": [
             "ErrorPopup",
             "Update"
         ]
     },
-    "SupplyWUWA": {
+    "SupplyMC": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -293,7 +293,7 @@
         },
         "next": []
     },
-    "SignZoneWUWA": {
+    "SignZoneMC": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -309,8 +309,8 @@
             }
         },
         "next": [
-            "SignZoneWUWA",
-            "SupplyWUWA"
+            "SignZoneMC",
+            "SupplyMC"
         ]
     }
 }
