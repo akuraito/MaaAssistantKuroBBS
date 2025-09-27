@@ -52,10 +52,10 @@
         "post_delay": 500,
         "next": [
             "SupplyPNS",
-            "SignZonePNS",
             "DailySupplyPNS"
         ],
         "interrupt": [
+            "SignZonePNS",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
@@ -78,11 +78,11 @@
         },
         "post_delay": 500,
         "next": [
-            "SignZoneMC",
             "SupplyMC",
             "DailySupplyMC"
         ],
         "interrupt": [
+            "SignZoneMC",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
@@ -359,17 +359,17 @@
             "type": "Swipe",
             "param": {
                 "begin": [90,800,80,80],
-                "end": [90,200,80,80],
+                "end": [90,600,80,80],
                 "duration": 500
             }
-        },
-        "next": ["SupplyPNS"]
+        }
     },
     "SupplyMC": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ["领"]
+                "expected": ["领"],
+                "index": 1
             }
         },
         "action": {
@@ -389,13 +389,9 @@
             "type": "Swipe",
             "param": {
                 "begin": [90,800,80,80],
-                "end": [90,500,80,80],
+                "end": [90,600,80,80],
                 "duration": 500
             }
-        },
-        "next": [
-            "SignZoneMC",
-            "SupplyMC"
-        ]
+        }
     }
 }
