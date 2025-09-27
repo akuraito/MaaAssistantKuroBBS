@@ -61,8 +61,7 @@
             "ExitTag",
             "ExitUser",
             "Update"
-        ],
-        "on_error": ["RebootPNS"]
+        ]
     },
     "DailySupplyMC": {
         "recognition": {
@@ -88,26 +87,7 @@
             "ExitTag",
             "ExitUser",
             "Update"
-        ],
-        "on_error": ["RebootMC"]
-    },
-    "RebootPNS": {
-        "action": {
-            "type": "StopApp",
-            "param": {
-                "package": "com.kurogame.kjq"
-            }
-        },
-        "next": ["PNS"]
-    },
-    "RebootMC": {
-        "action": {
-            "type": "StopApp",
-            "param": {
-                "package": "com.kurogame.kjq"
-            }
-        },
-        "next": ["MC"]
+        ]
     },
     "StartAPPKuroBBS": {
         "action": {
