@@ -41,6 +41,24 @@
             "StartAPPKuroBBS"
         ]
     },
+    "RebootPNS": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.kurogame.kjq"
+            }
+        },
+        "next": ["PNS"]
+    },
+    "RebootMC": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.kurogame.kjq"
+            }
+        },
+        "next": ["MC"]
+    },
     "StartAPPKuroBBS" :{
         "action": {
             "type": "StartApp",
@@ -289,7 +307,8 @@
             "ExitTag",
             "ExitUser",
             "Update"
-        ]
+        ],
+        "on_error": ["RebootPNS"]
     },
     "SupplyPNS": {
         "recognition": {
@@ -348,7 +367,8 @@
             "ExitTag",
             "ExitUser",
             "Update"
-        ]
+        ],
+        "on_error": ["RebootMC"]
     },
     "SupplyMC": {
         "recognition": {
