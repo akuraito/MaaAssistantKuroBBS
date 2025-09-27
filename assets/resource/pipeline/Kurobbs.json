@@ -11,7 +11,10 @@
             "Update",
             "ChildMode",
             "PopUp",
-            "ErrorPopup",
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
             "TopbarPNS",
             "HomeBar",
             "StartAPPKuroBBS"
@@ -29,7 +32,10 @@
             "Update",
             "ChildMode",
             "PopUp",
-            "ErrorPopup",
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
             "TopbarMC",
             "HomeBar",
             "StartAPPKuroBBS"
@@ -154,12 +160,70 @@
             "param": {}
         }
     },
-    "ErrorPopup": {
+    "ExitPopup": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "作战数据",
+                    "WIKI",
+                    "萌新入门",
+                    "编队推荐",
+                    "版本攻略",
+                    "周边",
+                    "游戏壁纸",
+                    "创作者认证",
+                    "资源月报",
+                    "资源简报",
+                    "养成计算器",
+                    "大地图"
+                ],
+                "roi": [0, 100, 720, 60]
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [4]
+            }
+        }
+    },
+    "ExitPost": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": ["说点什么吧"],
                 "roi": [30, 1200, 400, 80]
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [4]
+            }
+        }
+    },
+    "ExitTag": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["参与讨论"],
+                "roi": [256, 1106, 208, 75]
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [4]
+            }
+        }
+    },
+    "ExitUser": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["粉丝"],
+                "roi": [20, 357, 107, 63]
             }
         },
         "action": {
@@ -220,7 +284,10 @@
             "DailySupplyPNS"
         ],
         "interrupt": [
-            "ErrorPopup",
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
             "Update"
         ]
     },
@@ -276,7 +343,10 @@
             "DailySupplyMC"
         ],
         "interrupt": [
-            "ErrorPopup",
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
             "Update"
         ]
     },
