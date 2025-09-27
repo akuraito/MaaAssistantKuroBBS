@@ -1,9 +1,7 @@
 {
     "PNS": {
         "post_wait_freezes": 500,
-        "next": [
-            "DailySupplyPNS"
-        ],
+        "next": ["DailySupplyPNS"],
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
@@ -22,9 +20,7 @@
     },
     "MC": {
         "post_wait_freezes": 500,
-        "next": [
-            "DailySupplyMC"
-        ],
+        "next": ["DailySupplyMC"],
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
@@ -40,6 +36,60 @@
             "HomeBar",
             "StartAPPKuroBBS"
         ]
+    },
+    "DailySupplyPNS": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["每日补给"],
+                "roi": [0,700,720,100]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 500,
+        "next": [
+            "SupplyPNS",
+            "SignZonePNS",
+            "DailySupplyPNS"
+        ],
+        "interrupt": [
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
+            "Update"
+        ],
+        "on_error": ["RebootPNS"]
+    },
+    "DailySupplyMC": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["签到奖励"],
+                "roi": [300,700,150,100]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 500,
+        "next": [
+            "SignZoneMC",
+            "SupplyMC",
+            "DailySupplyMC"
+        ],
+        "interrupt": [
+            "ExitPopup",
+            "ExitPost",
+            "ExitTag",
+            "ExitUser",
+            "Update"
+        ],
+        "on_error": ["RebootMC"]
     },
     "RebootPNS": {
         "action": {
@@ -59,7 +109,7 @@
         },
         "next": ["MC"]
     },
-    "StartAPPKuroBBS" :{
+    "StartAPPKuroBBS": {
         "action": {
             "type": "StartApp",
             "param": {
@@ -67,21 +117,20 @@
             }
         }
     },
-    "StopAPPKuroBBS" :{
+    "StopAPPKuroBBS": {
         "action": {
             "type": "StopApp",
             "param": {
                 "package": "com.kurogame.kjq"
             }
-        },
-        "next": []
+        }
     },
     "SupplyDone": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": ["签到成功"],
-                "roi": [250, 250, 250, 80]
+                "roi": [250,250,250,80]
             }
         },
         "action": {
@@ -100,7 +149,7 @@
                     "《鸣潮》每日签到工具",
                     "每日签到"
                 ],
-                "roi": [0, 100, 720, 60]
+                "roi": [0,100,720,60]
             }
         },
         "action": {
@@ -115,7 +164,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["跳过"],
-                "roi": [500, 100, 200, 150]
+                "roi": [500,100,200,150]
             }
         },
         "action": {
@@ -128,7 +177,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["暂不更新"],
-                "roi": [100, 800, 250, 100]
+                "roi": [100,800,250,100]
             }
         },
         "action": {
@@ -141,7 +190,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["我知道了"],
-                "roi": [200, 1100, 3000, 100]
+                "roi": [200,1100,3000,100]
             }
         },
         "action": {
@@ -154,7 +203,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "PopUpClose.png",
-                "roi": [600, 40, 100, 100]
+                "roi": [600,40,100,100]
             }
         },
         "action": {
@@ -170,7 +219,7 @@
                     "首页",
                     "回到顶部"
                 ],
-                "roi": [0, 1200, 150, 80]
+                "roi": [0,1200,150,80]
             }
         },
         "action": {
@@ -196,7 +245,7 @@
                     "养成计算器",
                     "大地图"
                 ],
-                "roi": [0, 100, 720, 60]
+                "roi": [0,100,720,60]
             }
         },
         "action": {
@@ -211,7 +260,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["说点什么吧"],
-                "roi": [30, 1200, 400, 80]
+                "roi": [30,1200,400,80]
             }
         },
         "action": {
@@ -226,7 +275,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["参与讨论"],
-                "roi": [256, 1106, 208, 75]
+                "roi": [256,1106,208,75]
             }
         },
         "action": {
@@ -241,7 +290,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["粉丝"],
-                "roi": [20, 357, 107, 63]
+                "roi": [20,357,107,63]
             }
         },
         "action": {
@@ -259,7 +308,7 @@
                     "战双帕弥什",
                     "战双"
                 ],
-                "roi": [100, 100, 500, 80]
+                "roi": [100,100,500,80]
             }
         },
         "action": {
@@ -275,7 +324,7 @@
                     "鸣潮",
                     "呜潮"
                 ],
-                "roi": [100, 100, 500, 80]
+                "roi": [100,100,500,80]
             }
         },
         "action": {
@@ -283,39 +332,12 @@
             "param": {}
         }
     },
-    "DailySupplyPNS": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["每日补给"],
-                "roi": [0, 700, 720, 100]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "post_delay": 500,
-        "next": [
-            "SupplyPNS",
-            "SignZonePNS",
-            "DailySupplyPNS"
-        ],
-        "interrupt": [
-            "ExitPopup",
-            "ExitPost",
-            "ExitTag",
-            "ExitUser",
-            "Update"
-        ],
-        "on_error": ["RebootPNS"]
-    },
     "SupplyPNS": {
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [220, 200, 70],
-                "upper": [240, 220, 150],
+                "lower": [220,200,70],
+                "upper": [240,220,150],
                 "connected": true,
                 "count": 55
             }
@@ -336,39 +358,12 @@
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [90, 800, 80, 80],
-                "end": [90, 200, 80, 80],
+                "begin": [90,800,80,80],
+                "end": [90,200,80,80],
                 "duration": 500
             }
         },
         "next": ["SupplyPNS"]
-    },
-    "DailySupplyMC": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["签到奖励"],
-                "roi": [300, 700, 150, 100]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "post_delay": 500,
-        "next": [
-            "SignZoneMC",
-            "SupplyMC",
-            "DailySupplyMC"
-        ],
-        "interrupt": [
-            "ExitPopup",
-            "ExitPost",
-            "ExitTag",
-            "ExitUser",
-            "Update"
-        ],
-        "on_error": ["RebootMC"]
     },
     "SupplyMC": {
         "recognition": {
@@ -393,8 +388,8 @@
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [90, 800, 80, 80],
-                "end": [90, 500, 80, 80],
+                "begin": [90,800,80,80],
+                "end": [90,500,80,80],
                 "duration": 500
             }
         },
