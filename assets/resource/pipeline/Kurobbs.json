@@ -349,6 +349,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["领"],
+                "order_by": "Vertical",
                 "index": 1
             }
         },
