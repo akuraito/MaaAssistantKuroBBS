@@ -51,7 +51,7 @@
             "DailySupplyPNS"
         ],
         "interrupt": [
-            "SignZonePNS",
+            "SignZone",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
@@ -77,7 +77,7 @@
             "DailySupplyMC"
         ],
         "interrupt": [
-            "SignZoneMC",
+            "SignZone",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
@@ -309,23 +309,6 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": []
-    },
-    "SignZonePNS": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["领取记录"]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [90,800,80,80],
-                "end": [90,600,80,80],
-                "duration": 500
-            }
         }
     },
     "SupplyMC": {
@@ -338,10 +321,9 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": []
+        }
     },
-    "SignZoneMC": {
+    "SignZone": {
         "recognition": {
             "type": "OCR",
             "param": {
