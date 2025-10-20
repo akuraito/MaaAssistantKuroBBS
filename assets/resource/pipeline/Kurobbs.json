@@ -348,9 +348,7 @@
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ["领"],
-                "order_by": "Vertical",
-                "index": 1
+                "expected": ["^(?!.*领取.*).*领.*$"]
             }
         },
         "action": {
