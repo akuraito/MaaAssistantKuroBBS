@@ -4,15 +4,15 @@
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
-            "TopbarPNS",
             "Update",
             "ChildMode",
             "PopUp",
+            "TopbarPNS",
+            "HomeBar",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
             "ExitUser",
-            "HomeBar",
             "StartAPPKuroBBS"
         ]
     },
@@ -21,15 +21,15 @@
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
-            "TopbarMC",
             "Update",
             "ChildMode",
             "PopUp",
+            "TopbarMC",
+            "HomeBar",
             "ExitPopup",
             "ExitPost",
             "ExitTag",
             "ExitUser",
-            "HomeBar",
             "StartAPPKuroBBS"
         ]
     },
