@@ -1,13 +1,26 @@
 {
+    "interface_version": 2,
+    "languages": {
+        "zh_cn": "interface_zh.json"
+    },
+    "name": "MAKBBS",
+    "label": "$MAKBBS",
+    "github": "https://github.com/akuraito/MaaAssistantKuroBBS",
+    "version": "1.0.0",
+    "license": "MIT",
+    "welcome": "欢迎使用MAKBBS!",
+    "description": "适用于 战双及鸣潮 每日签到的 库街区 小助手",
     "controller": [
         {
-            "name": "Adb",
+            "name": "Android",
+            "label": "$Android",
             "type": "Adb"
         }
     ],
     "resource": [
         {
-            "name": "库街区",
+            "name": "KUROBBS",
+            "label": "#KUROBBS",
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
@@ -15,15 +28,18 @@
     ],
     "task": [
         {
-            "name": "战双每日签到",
+            "name": "Punish Gray Raven",
+            "label": "$Punish Gray Raven",
             "entry": "PNS"
         },
         {
-            "name": "鸣潮每日签到",
+            "name": "Wuthering Waves",
+            "label": "$Wuthering Waves",
             "entry": "MC"
         },
         {
-            "name": "关闭库街区",
+            "name": "Exit KUROBBS",
+            "label": "$Exit KUROBBS",
             "entry": "StopAPPKuroBBS"
         }
     ]
