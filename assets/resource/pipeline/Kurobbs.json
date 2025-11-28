@@ -4,6 +4,7 @@
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
+            "Skip",
             "Update",
             "ChildMode",
             "PopUp",
@@ -21,6 +22,7 @@
         "interrupt": [
             "SupplyDone",
             "ExitSupplyPage",
+            "Skip",
             "Update",
             "ChildMode",
             "PopUp",
@@ -45,7 +47,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 2000,
+        "post_delay": 1000,
         "next": [
             "SupplyPNS",
             "DailySupplyPNS"
@@ -71,7 +73,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 2000,
+        "post_delay": 1000,
         "next": [
             "SupplyMC",
             "DailySupplyMC"
@@ -91,8 +93,7 @@
             "param": {
                 "package": "com.kurogame.kjq/com.kurogame.kjq.userlogin.ui.activity.SplashActivity"
             }
-        },
-        "post_delay": 4000
+        }
     },
     "StopAPPKuroBBS": {
         "action": {
@@ -174,6 +175,16 @@
             "type": "Click",
             "param": {}
         }
+    },
+    "Skip": {
+        "recognition": {
+            "type": "OCR",
+            "param":{
+                "expected": ["跳过"],
+                "roi": [522,125,161,78]
+            }
+        },
+        "post_delay": 1000
     },
     "HomeBar": {
         "recognition": {
@@ -278,7 +289,8 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "post_delay": 1000
     },
     "TopbarMC": {
         "recognition": {
@@ -294,7 +306,8 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "post_delay": 1000
     },
     "SupplyPNS": {
         "recognition": {
