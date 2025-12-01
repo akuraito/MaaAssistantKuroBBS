@@ -20,7 +20,7 @@
     "resource": [
         {
             "name": "KUROBBS",
-            "label": "#KUROBBS",
+            "label": "$KUROBBS",
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
