@@ -341,7 +341,7 @@
                 "roi": [250,250,250,100]
             }
         },
-        "timeout": 2000,
+        "max_hit": 1,
         "focus": {
             "Node.Recognition.Succeeded": "签到成功",
             "Node.Recognition.Failed": "签到失败"
