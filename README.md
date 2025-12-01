@@ -12,6 +12,8 @@ MAKBBS 是指 Maa Assistant KuroBBS
 
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
+![Downloads](https://img.shields.io/github/downloads/akuraito/MaaAssistantKuroBBS/total)
+
 </div>
 
 ## 即刻开始
@@ -39,7 +41,7 @@ MAKBBS 是指 Maa Assistant KuroBBS
 
 在 MAA_Punish `资源设置`-`自定义启动`-`结束后运行程序` 中，填入 `D:/Software/MAKBBS/MaaPiCli.exe` 或 `D:/Software/MAKBBS/MFAAvalonia.exe`。
 
-- 若选择 `MaaPiCli.exe`，在 下方 `运行参数` 中填入 `-d` 可跳过交互直接运行任务
+- 若选择 `MaaPiCli.exe`，在下方 `运行参数` 中填入 `-d` 可跳过交互直接运行任务
 - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
 
 > 注意：`D:/Software/MAKBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
