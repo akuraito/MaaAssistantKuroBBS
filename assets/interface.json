@@ -6,7 +6,7 @@
     "name": "MAKBBS",
     "label": "$MAKBBS",
     "github": "https://github.com/akuraito/MaaAssistantKuroBBS",
-    "version": "0.2.2",
+    "version": "1.0.0",
     "license": "MIT",
     "welcome": "欢迎使用MAKBBS!",
     "description": "适用于 战双及鸣潮 每日签到的 库街区 小助手",
