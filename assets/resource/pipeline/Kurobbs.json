@@ -343,8 +343,7 @@
         },
         "max_hit": 1,
         "focus": {
-            "Node.Recognition.Succeeded": "签到成功",
-            "Node.Recognition.Failed": "签到失败"
+            "Node.Recognition.Succeeded": "签到成功"
         }
     }
 }
