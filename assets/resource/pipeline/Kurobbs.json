@@ -48,7 +48,8 @@
         "post_delay": 1000,
         "next": [
             "DailySupplyPNS",
-            "SupplyPNS",
+            "SupplyDone",
+            "[JumpBack]SupplyPNS",
             "[JumpBack]SignZone",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
@@ -71,8 +72,9 @@
         },
         "post_delay": 1000,
         "next": [
-            "SupplyMC",
             "DailySupplyMC",
+            "SupplyDone",
+            "[JumpBack]SupplyMC",
             "[JumpBack]SignZone",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
@@ -301,8 +303,7 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": ["SupplyDone"]
+        }
     },
     "SupplyMC": {
         "recognition": {
@@ -314,8 +315,7 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "next": ["SupplyDone"]
+        }
     },
     "SignZone": {
         "recognition": {
