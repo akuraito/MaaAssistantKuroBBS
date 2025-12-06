@@ -45,7 +45,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "DailySupplyPNS",
             "SupplyDone",
@@ -70,7 +70,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "DailySupplyMC",
             "SupplyDone",
@@ -129,7 +129,8 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "post_delay": 500
     },
     "ChildMode": {
         "recognition": {
@@ -142,7 +143,8 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "post_delay": 500
     },
     "PopUp": {
         "recognition": {
@@ -271,7 +273,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 1000
+        "post_delay": 500
     },
     "TopbarMC": {
         "recognition": {
@@ -288,7 +290,7 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 1000
+        "post_delay": 500
     },
     "SupplyPNS": {
         "recognition": {
