@@ -49,13 +49,13 @@
         "next": [
             "DailySupplyPNS",
             "SupplyDone",
-            "[JumpBack]SupplyPNS",
-            "[JumpBack]SignZone",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
-            "[JumpBack]Update"
+            "[JumpBack]Update",
+            "[JumpBack]SupplyPNS",
+            "[JumpBack]SignZone"
         ]
     },
     "DailySupplyMC": {
