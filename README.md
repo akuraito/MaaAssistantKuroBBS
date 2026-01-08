@@ -37,7 +37,7 @@ MAKBBS 是指 Maa Assistant KuroBBS
 1. 在 `完成后` 中勾选 `运行其他程序`
 1. 在 `程序路径` 中填入 `D:/Software/MAKBBS/MaaPiCli.exe` 或 `D:/Software/MAKBBS/MFAAvalonia.exe`。
     - 若选择 `MaaPiCli.exe`，在下方 `程序参数` 中填入 `-d` 可跳过交互直接运行任务
-    - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动软件并启动脚本`
+    - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `仅启动脚本`
 
 > 注意：`D:/Software/MAKBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
 
