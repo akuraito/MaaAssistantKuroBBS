@@ -29,17 +29,17 @@ MAKBBS 是指 Maa Assistant KuroBBS
   1. 下载对应平台的压缩包：[Releases](https://github.com/akuraito/MaaAssistantKuroBBS/releases/latest)
   1. 将压缩包解压到没有中文的目录下
 
-> 压缩包文件中应包含 `MaaPiCli.exe`（命令行界面）与 `MFAAvalonia.exe`（图形化界面），可以选择其一使用。
+- 点击 `MFAAvalonia.exe` 开始使用
 
 ### 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用
 
 1. 在 MAA_Punish 中点击 `完成后运行`
 1. 在 `完成后` 中勾选 `运行其他程序`
-1. 在 `程序路径` 中填入 `D:/Software/MAKBBS/MaaPiCli.exe` 或 `D:/Software/MAKBBS/MFAAvalonia.exe`。
-    - 若选择 `MaaPiCli.exe`，在下方 `程序参数` 中填入 `-d` 可跳过交互直接运行任务
-    - 若选择 `MFAAvalonia.exe`，可在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `仅启动脚本`
+1. 在 `程序路径` 中填入 `D:/Software/MAKBBS/MFAAvalonia.exe`。
 
-> 注意：`D:/Software/MAKBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
+    > `D:/Software/MAKBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
+
+1. 在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `仅启动脚本`
 
 ## Q&A
 
@@ -54,10 +54,6 @@ A：通常是因为每月签到页换颜色、临时的七日签到、连续签�
 Q：会支持多个战双账号签到、库街区自身的签到吗？
 
 A：不会。
-
-Q：`MaaPiCli.exe` 可否在结束后打开其他软件？
-
-A：不行，仅 `MFAAvalonia.exe` 可以结束后打开其他软件。
 
 ## 开发
 
@@ -82,8 +78,6 @@ _欢迎大佬们来带带~_
     ```
 
     > 您不需要将 OCR 资源文件上传到您的代码仓库中。`.gitignore` 已经忽略了 `assets/resource/model/ocr/` 目录，且 GitHub workflow 在发布版本时会自动配置这些资源文件。
-
-1. 进行开发工作，按您的业务需求修改 `assets` 中的资源文件，请参考 [MaaFramework 相关文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-快速开始.md#资源准备)。
 
 ## 鸣谢
 
