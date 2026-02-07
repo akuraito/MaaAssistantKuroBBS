@@ -34,12 +34,12 @@ MAKBBS 是指 Maa Assistant KuroBBS
 ### 与 [MAA_Punish](https://github.com/overflow65537/MAA_Punish) 共同使用
 
 1. 在 MAA_Punish 中点击 `完成后运行`
-1. 在 `完成后` 中勾选 `运行其他程序`
-1. 在 `程序路径` 中填入 `D:/Software/MAKBBS/MFAAvalonia.exe`。
+    - 在 `完成后` 中勾选 `运行其他程序`
+    - 在 `程序路径` 中填入 `D:/Software/MAKBBS/MFAAvalonia.exe`。
 
     > `D:/Software/MAKBBS` 请替换成你自己的 MaaAssistantKuroBBS 目录
 
-1. 在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `仅启动脚本`
+1. 在 `MFAAvalonia.exe` 的 `设置`-`启动设置`-`启动后操作` 中选择 `启动游戏并启动脚本`
 
 ## Q&A
 
