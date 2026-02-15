@@ -296,8 +296,8 @@
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [200,200,100],
-                "upper": [240,240,150],
+                "lower": [224,200,64],
+                "upper": [244,220,84],
                 "connected": true,
                 "count": 55
             }
