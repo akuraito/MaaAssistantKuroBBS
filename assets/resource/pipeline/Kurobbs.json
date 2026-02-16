@@ -298,6 +298,8 @@
             "param": {
                 "lower": [224,200,64],
                 "upper": [244,220,84],
+                "order_by": "Horizontal",
+                "index": -1,
                 "connected": true,
                 "count": 55
             }
