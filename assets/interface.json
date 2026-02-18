@@ -49,6 +49,36 @@
         {
             "name": "退出库街区",
             "entry": "StopAPPKuroBBS"
+        },
+        {
+            "name": "战双帕弥什TapTap签到",
+            "entry": "Taptap",
+            "description": "本功能仅能领取礼包码，本功能**不能使用礼包码**，请在礼包码过期前手动兑换",
+            "option": ["退出TapTap"]
         }
-    ]
+    ],
+    "option": {
+        "退出TapTap": {
+            "type": "switch",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "StopAPPTaptap": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "StopAPPTaptap": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

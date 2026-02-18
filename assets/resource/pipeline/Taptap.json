@@ -1,0 +1,197 @@
+{
+    "Taptap": {
+        "next": [
+            "TapSignDone",
+            "[JumpBack]TapSignPageEvent",
+            "[JumpBack]TapSearchBar",
+            "[JumpBack]TapSearchHome",
+            "[JumpBack]StartAPPTaptap"
+        ]
+    },
+    "StartAPPTaptap": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.taptap/com.play.taptap.ui.SplashAct"
+            }
+        },
+        "max_hit": 1
+    },
+    "StopAPPTaptap": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.taptap"
+            }
+        },
+        "enabled": false,
+        "next": ["StopTask"]
+    },
+    "StopTask": {
+        "action": {
+            "type": "StopTask"
+        }
+    },
+    "TapSearchHome": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "TapSearchHome_0.png",
+                    "TapSearchHome_1.png"
+                ],
+                "roi": [180,60,350,70]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "TapSearchBar": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["搜索"],
+                "roi": [500,70,100,50]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [-400,0,280,0]
+            }
+        },
+        "next": [
+            "TapSearch",
+            "[JumpBack]TapSearchInput"
+        ]
+    },
+    "TapSearchInput": {
+        "action": {
+            "type": "InputText",
+            "param": {
+                "input_text": "战双帕弥什"
+            }
+        }
+    },
+    "TapSearch": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": "OCR",
+                        "expected": ["搜索"],
+                        "roi": [500,70,100,50]
+                    },
+                    {
+                        "recognition": "OCR",
+                        "expected": ["战双帕弥什"],
+                        "roi": [100,70,380,50]
+                    }
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [510,70,80,50]
+            }
+        },
+        "next": ["TapSearchResoult"]
+    },
+    "TapSearchResoult": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["战双帕弥什"],
+                "roi": [0,200,720,1080]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "TapSignPageEvent": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["活动"],
+                "roi": [110,1200,60,40]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "TapSignDone",
+            "[JumpBack]TapSignClaimDailyGift",
+            "[JumpBack]TapSignNow",
+            "[JumpBack]TapSignPage"
+        ]
+    },
+    "TapSignPage": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["去签到"],
+                "roi": [555,500,130,55]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "TapSignNow": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["立即签到"],
+                "roi": [360,1150,330,100]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "TapSignClaimDailyGift": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["领取今日礼包"],
+                "roi": [120,930,482,80]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "TapSignDone": {
+        "recognition": {
+            "type": "Or",
+            "param": {
+                "any_of": [
+                    {
+                        "recognition": "OCR",
+                        "expected": ["添加桌面小组件提醒我签到"]
+                    },
+                    {
+                        "recognition": "OCR",
+                        "expected": ["今日已签到"],
+                        "roi": [360,1150,330,100]
+                    }
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已签到"
+        },
+        "next": ["StopAPPTaptap"]
+    }
+}
