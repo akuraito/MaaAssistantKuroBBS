@@ -15,7 +15,8 @@
                 "package": "com.taptap/com.play.taptap.ui.SplashAct"
             }
         },
-        "max_hit": 1
+        "max_hit": 1,
+        "post_wait_freezes": 10
     },
     "StopAPPTaptap": {
         "action": {
@@ -106,7 +107,8 @@
             "type": "OCR",
             "param": {
                 "expected": ["战双帕弥什"],
-                "roi": [0,200,720,1080]
+                "roi": [0,200,720,1080],
+                "order_by": "Vertical"
             }
         },
         "action": {
@@ -130,15 +132,41 @@
             "TapSignDone",
             "[JumpBack]TapSignClaimDailyGift",
             "[JumpBack]TapSignNow",
-            "[JumpBack]TapSignPage"
+            "[JumpBack]TapSignPage",
+            "[JumpBack]TapSignPageHoteventsSign",
+            "[JumpBack]TapSignPageHotevents"
         ]
+    },
+    "TapSignPageHotevents": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["热门活动"],
+                "roi": [0,350,150,930]
+            }
+        }
+    },
+    "TapSignPageHoteventsSign": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["签到"],
+                "roi": "TapSignPageHotevents",
+                "roi_offset": [-22,40,600,50]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
     },
     "TapSignPage": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": ["去签到"],
-                "roi": [555,500,130,55]
+                "roi": [555,500,130,780]
             }
         },
         "action": {

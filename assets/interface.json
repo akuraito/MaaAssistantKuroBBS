@@ -51,16 +51,20 @@
             "entry": "StopAPPKuroBBS"
         },
         {
-            "name": "战双帕弥什TapTap签到",
+            "name": "TapTap 签到",
             "entry": "Taptap",
-            "description": "本功能仅能领取礼包码，本功能**不能使用礼包码**，请在礼包码过期前手动兑换",
-            "option": ["退出TapTap"]
+            "description": "此功能**不能使用礼包码**，请在礼包码过期前手动兑换。",
+            "option": [
+                "退出 TapTap",
+                "选择游戏"
+            ]
         }
     ],
     "option": {
-        "退出TapTap": {
+        "退出 TapTap": {
             "type": "switch",
-            "default_case": "No",
+            "description": "在完成任务后关闭 TapTap，使用复数此任务时，此选项需开启。",
+            "default_case": "Yes",
             "cases": [
                 {
                     "name": "Yes",
@@ -75,6 +79,59 @@
                     "pipeline_override": {
                         "StopAPPTaptap": {
                             "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "选择游戏": {
+            "type": "select",
+            "default_case": "战双帕弥什",
+            "cases": [
+                {
+                    "name": "战双帕弥什"
+                },
+                {
+                    "name": "鸣潮",
+                    "pipeline_override": {
+                        "TapSearchInput": {
+                            "action": {
+                                "param": {
+                                    "input_text": "鸣潮"
+                                }
+                            }
+                        },
+                        "TapSearch": {
+                            "recognition": {
+                                "param": {
+                                    "all_of": [
+                                        {
+                                            "recognition": "OCR",
+                                            "expected": ["搜索"],
+                                            "roi": [500,70,100,50]
+                                        },
+                                        {
+                                            "recognition": "OCR",
+                                            "expected": ["鸣潮"],
+                                            "roi": [100,70,380,50]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "TapSearchResoult": {
+                            "recognition": {
+                                "param": {
+                                    "expected": ["鸣潮"]
+                                }
+                            }
+                        },
+                        "TapSignDone": {
+                            "recognition": {
+                                "param": {
+                                    "roi": [110,975,500,90]
+                                }
+                            }
                         }
                     }
                 }
