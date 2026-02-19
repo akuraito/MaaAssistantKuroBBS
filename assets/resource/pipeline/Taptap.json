@@ -40,7 +40,7 @@
                     "TapSearchHome_0.png",
                     "TapSearchHome_1.png"
                 ],
-                "roi": [180,60,350,70]
+                "roi": [0,0,720,325]
             }
         },
         "action": {
