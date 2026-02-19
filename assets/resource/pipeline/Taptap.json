@@ -174,23 +174,14 @@
     },
     "TapSignDone": {
         "recognition": {
-            "type": "Or",
+            "type": "OCR",
             "param": {
-                "any_of": [
-                    {
-                        "recognition": "OCR",
-                        "expected": ["添加桌面小组件提醒我签到"]
-                    },
-                    {
-                        "recognition": "OCR",
-                        "expected": ["今日已签到"],
-                        "roi": [360,1150,330,100]
-                    }
-                ]
+                "expected": ["添加桌面小组件提醒我签到"],
+                "roi": [110,960,500,90]
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "已签到"
+            "Node.Recognition.Succeeded": "签到成功"
         },
         "next": ["StopAPPTaptap"]
     }
