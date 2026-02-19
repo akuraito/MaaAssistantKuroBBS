@@ -24,7 +24,7 @@
     ],
     "resource": [
         {
-            "name": "库街区",
+            "name": "官服",
             "path": [
                 "./resource"
             ]
@@ -39,28 +39,63 @@
     // },
     "task": [
         {
-            "name": "战双帕弥什每日签到",
-            "entry": "PNS"
-        },
-        {
-            "name": "鸣潮每日签到",
-            "entry": "MC"
-        },
-        {
-            "name": "退出库街区",
-            "entry": "StopAPPKuroBBS"
+            "name": "库街区签到",
+            "entry": "KuroBBSEntrance",
+            "option": [
+                "库街区签到游戏",
+                "退出库街区"
+            ]
         },
         {
             "name": "TapTap 签到",
             "entry": "Taptap",
             "description": "此功能**不能使用礼包码**，请在礼包码过期前手动兑换。",
             "option": [
-                "退出 TapTap",
-                "选择游戏"
+                "TapTap 签到游戏",
+                "退出 TapTap"
             ]
         }
     ],
     "option": {
+        "退出库街区": {
+            "type": "switch",
+            "default_case": "No",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "StopAPPKuroBBS": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "StopAPPKuroBBS": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "库街区签到游戏": {
+            "type": "select",
+            "default_case": "战双帕弥什",
+            "cases": [
+                {
+                    "name": "战双帕弥什"
+                },
+                {
+                    "name": "鸣潮",
+                    "pipeline_override": {
+                        "KuroBBSEntrance": {
+                            "next": ["MC"]
+                        }
+                    }
+                }
+            ]
+        },
         "退出 TapTap": {
             "type": "switch",
             "description": "在完成任务后关闭 TapTap，使用复数此任务时，此选项需开启。",
@@ -84,7 +119,7 @@
                 }
             ]
         },
-        "选择游戏": {
+        "TapTap 签到游戏": {
             "type": "select",
             "default_case": "战双帕弥什",
             "cases": [

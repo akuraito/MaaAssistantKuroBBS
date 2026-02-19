@@ -1,4 +1,7 @@
 {
+    "KuroBBSEntrance": {
+        "next": ["PNS"]
+    },
     "PNS": {
         "next": [
             "DailySupplyPNS",
@@ -97,6 +100,13 @@
             "param": {
                 "package": "com.kurogame.kjq"
             }
+        },
+        "enabled": false,
+        "next": ["StopTask"]
+    },
+    "StopTask": {
+        "action": {
+            "type": "StopTask"
         }
     },
     "ExitSupplyPage": {
@@ -348,6 +358,7 @@
         },
         "focus": {
             "Node.Recognition.Succeeded": "签到成功"
-        }
+        },
+        "next": ["StopAPPKuroBBS"]
     }
 }

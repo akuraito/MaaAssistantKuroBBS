@@ -28,11 +28,6 @@
         "enabled": false,
         "next": ["StopTask"]
     },
-    "StopTask": {
-        "action": {
-            "type": "StopTask"
-        }
-    },
     "TapSearchHome": {
         "recognition": {
             "type": "TemplateMatch",
