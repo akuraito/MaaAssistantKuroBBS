@@ -57,6 +57,7 @@
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
             "[JumpBack]Update",
+            "[JumpBack]SupplyPNS",
             "[JumpBack]SignZone"
         ]
     },
@@ -77,7 +78,7 @@
             "DailySupplyMC",
             "SupplyDone",
             "[JumpBack]SupplyMC",
-            "[JumpBack]SignZoneSwipe",
+            "[JumpBack]SignZone",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
             "[JumpBack]ExitTag",
@@ -302,29 +303,16 @@
         },
         "post_delay": 500
     },
-    "SignZone": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["漏签"]
-            }
-        },
-        "next": [
-            "[JumpBack]SupplyPNS",
-            "[JumpBack]SignZoneSwipe",
-            "[JumpBack]SignZone"
-        ]
-    },
     "SupplyPNS": {
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [129, 70, 245],
-                "upper": [149, 90, 255],
+                "lower": [129,70,245],
+                "upper": [149,90,255],
                 "connected": true,
                 "count": 55,
                 "roi": "SignZone",
-                "roi_offset": [-37,58,552,600]
+                "roi_offset": [-20,-140,515,570]
             }
         },
         "action": {
@@ -344,21 +332,22 @@
             "param": {}
         }
     },
-    "SignZoneSwipe": {
+    "SignZone": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ["领取记录"]
+                "expected": ["漏签"]
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [90,800,80,80],
-                "end": [90,600,80,80],
+                "begin": [90,800,1,1],
+                "end": [90,600,1,1],
                 "duration": 500
             }
-        }
+        },
+        "max_hit": 3
     },
     "SupplyDone": {
         "recognition": {
