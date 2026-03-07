@@ -57,7 +57,6 @@
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
             "[JumpBack]Update",
-            "[JumpBack]SupplyPNS",
             "[JumpBack]SignZone"
         ]
     },
@@ -78,7 +77,7 @@
             "DailySupplyMC",
             "SupplyDone",
             "[JumpBack]SupplyMC",
-            "[JumpBack]SignZone",
+            "[JumpBack]SignZoneSwipe",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
             "[JumpBack]ExitTag",
@@ -303,16 +302,29 @@
         },
         "post_delay": 500
     },
+    "SignZone": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["漏签"]
+            }
+        },
+        "next": [
+            "[JumpBack]SupplyPNS",
+            "[JumpBack]SignZoneSwipe",
+            "[JumpBack]SignZone"
+        ]
+    },
     "SupplyPNS": {
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [224,200,64],
-                "upper": [244,220,84],
-                "order_by": "Horizontal",
-                "index": -1,
+                "lower": [129, 70, 245],
+                "upper": [149, 90, 255],
                 "connected": true,
-                "count": 55
+                "count": 55,
+                "roi": "SignZone",
+                "roi_offset": [-37,58,552,600]
             }
         },
         "action": {
@@ -332,7 +344,7 @@
             "param": {}
         }
     },
-    "SignZone": {
+    "SignZoneSwipe": {
         "recognition": {
             "type": "OCR",
             "param": {
