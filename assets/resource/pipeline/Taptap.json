@@ -129,8 +129,27 @@
             "[JumpBack]TapSignNow",
             "[JumpBack]TapSignPage",
             "[JumpBack]TapSignPageHoteventsSign",
-            "[JumpBack]TapSignPageHotevents"
+            "[JumpBack]TapSignPageHotevents",
+            "[JumpBack]TapSignPageSwipe"
         ]
+    },
+    "TapSignPageSwipe": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["共\\d+条"],
+                "roi": [153,363,81,33]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [30,1000],
+                "end": [30,500],
+                "duration": 500
+            }
+        },
+        "max_hit": 5
     },
     "TapSignPageHotevents": {
         "recognition": {
@@ -139,7 +158,8 @@
                 "expected": ["热门活动"],
                 "roi": [0,350,150,930]
             }
-        }
+        },
+        "max_hit": 1
     },
     "TapSignPageHoteventsSign": {
         "recognition": {
