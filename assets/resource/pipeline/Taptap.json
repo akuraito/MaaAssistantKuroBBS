@@ -115,7 +115,10 @@
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ["活动"],
+                "expected": [
+                    "活动",
+                    "领礼包"
+                ],
                 "roi": [110,1200,60,40]
             }
         },
