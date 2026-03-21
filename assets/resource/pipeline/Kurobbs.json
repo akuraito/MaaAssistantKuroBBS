@@ -58,6 +58,37 @@
             "[JumpBack]ExitUser",
             "[JumpBack]Update",
             "[JumpBack]SupplyPNS",
+            "[JumpBack]SupplyV2D31",
+            "[JumpBack]SupplyV2D30",
+            "[JumpBack]SupplyV2D29",
+            "[JumpBack]SupplyV2D28",
+            "[JumpBack]SupplyV2D27",
+            "[JumpBack]SupplyV2D26",
+            "[JumpBack]SupplyV2D25",
+            "[JumpBack]SupplyV2D24",
+            "[JumpBack]SupplyV2D23",
+            "[JumpBack]SupplyV2D22",
+            "[JumpBack]SupplyV2D21",
+            "[JumpBack]SupplyV2D20",
+            "[JumpBack]SupplyV2D19",
+            "[JumpBack]SupplyV2D18",
+            "[JumpBack]SupplyV2D17",
+            "[JumpBack]SupplyV2D16",
+            "[JumpBack]SupplyV2D15",
+            "[JumpBack]SupplyV2D14",
+            "[JumpBack]SupplyV2D13",
+            "[JumpBack]SupplyV2D12",
+            "[JumpBack]SupplyV2D11",
+            "[JumpBack]SupplyV2D10",
+            "[JumpBack]SupplyV2D9",
+            "[JumpBack]SupplyV2D8",
+            "[JumpBack]SupplyV2D7",
+            "[JumpBack]SupplyV2D6",
+            "[JumpBack]SupplyV2D5",
+            "[JumpBack]SupplyV2D4",
+            "[JumpBack]SupplyV2D3",
+            "[JumpBack]SupplyV2D2",
+            "[JumpBack]SupplyV2D1",
             "[JumpBack]SignZone"
         ]
     },
@@ -361,5 +392,470 @@
             "Node.Recognition.Succeeded": "签到成功"
         },
         "next": ["StopAPPKuroBBS"]
+    },
+    "SupplyV2D31": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第31天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D30": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第30天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D29": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第29天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D28": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第28天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D27": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第27天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D26": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第26天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D25": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第25天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D24": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第24天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D23": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第23天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D22": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第22天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D21": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第21天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D20": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第20天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D19": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第19天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D18": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第18天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D17": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第17天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D16": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第16天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D15": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第15天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D14": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第14天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D13": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第13天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D12": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第12天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D11": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第11天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D10": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第10天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D9": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第9天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D8": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第8天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D7": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第7天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第6天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第5天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第4天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第3天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第2天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
+    },
+    "SupplyV2D1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["第1天"],
+                "roi": "SignZone",
+                "roi_offset": [-20,-140,515,570]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 1
     }
 }
