@@ -123,7 +123,8 @@
             "param": {
                 "package": "com.kurogame.kjq/com.kurogame.kjq.userlogin.ui.activity.SplashActivity"
             }
-        }
+        },
+        "max_hit": 1
     },
     "StopAPPKuroBBS": {
         "action": {
@@ -349,7 +350,8 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "max_hit": 1
     },
     "SupplyMC": {
         "recognition": {
