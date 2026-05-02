@@ -408,7 +408,7 @@
             }
         },
         "focus": {
-            "Node.Recognition.Succeeded": "签到成功"
+            "Node.Recognition.Succeeded": "✅签到成功"
         },
         "next": ["StopAPPKuroBBS"]
     },
