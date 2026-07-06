@@ -4,6 +4,7 @@
     },
     "PNS": {
         "next": [
+            "[JumpBack]Update",
             "DailySupplyPNS",
             "[JumpBack]ExitSupplyPage",
             "[JumpBack]ExitPopup",
@@ -11,7 +12,6 @@
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
             "[JumpBack]Skip",
-            "[JumpBack]Update",
             "[JumpBack]ChildMode",
             "[JumpBack]PopUp",
             "[JumpBack]TopbarPNS",
@@ -21,6 +21,7 @@
     },
     "MC": {
         "next": [
+            "[JumpBack]Update",
             "DailySupplyMC",
             "[JumpBack]ExitSupplyPage",
             "[JumpBack]ExitPopup",
@@ -28,7 +29,6 @@
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
             "[JumpBack]Skip",
-            "[JumpBack]Update",
             "[JumpBack]ChildMode",
             "[JumpBack]PopUp",
             "[JumpBack]TopbarMC",
@@ -50,13 +50,13 @@
         },
         "post_delay": 500,
         "next": [
+            "[JumpBack]Update",
             "DailySupplyPNS",
             "SupplyDone",
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
             "[JumpBack]ExitTag",
             "[JumpBack]ExitUser",
-            "[JumpBack]Update",
             "[JumpBack]SupplyPNS",
             "[JumpBack]SupplyV2D31",
             "[JumpBack]SupplyV2D30",
@@ -106,6 +106,7 @@
         },
         "post_delay": 500,
         "next": [
+            "[JumpBack]Update",
             "DailySupplyMC",
             "SupplyDone",
             "[JumpBack]SupplyMC",
@@ -113,8 +114,7 @@
             "[JumpBack]ExitPopup",
             "[JumpBack]ExitPost",
             "[JumpBack]ExitTag",
-            "[JumpBack]ExitUser",
-            "[JumpBack]Update"
+            "[JumpBack]ExitUser"
         ]
     },
     "StartAPPKuroBBS": {
