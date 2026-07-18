@@ -339,8 +339,8 @@
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "lower": [201,177,0],
-                "upper": [221,197,20],
+                "lower": [81,26,186],
+                "upper": [101,46,206],
                 "connected": true,
                 "count": 55,
                 "roi": "SignZone",
