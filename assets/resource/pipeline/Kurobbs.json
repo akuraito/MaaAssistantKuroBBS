@@ -48,6 +48,7 @@
             "type": "Click",
             "param": {}
         },
+        "max_hit": 20,
         "post_delay": 500,
         "next": [
             "[JumpBack]Update",
@@ -104,6 +105,7 @@
             "type": "Click",
             "param": {}
         },
+        "max_hit": 20,
         "post_delay": 500,
         "next": [
             "[JumpBack]Update",
