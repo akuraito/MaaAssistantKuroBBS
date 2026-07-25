@@ -49,7 +49,7 @@
         {
             "name": "TapTap 签到",
             "entry": "Taptap",
-            "description": "此功能**不能使用礼包码**，请在礼包码过期前手动兑换。",
+            "description": "此功能**不能使用礼包码**，请在礼包码过期前手动兑换。此功能**不支持集卡**",
             "option": [
                 "TapTap 签到游戏",
                 "退出 TapTap"
