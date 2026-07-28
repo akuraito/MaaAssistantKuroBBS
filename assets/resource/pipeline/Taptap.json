@@ -127,7 +127,6 @@
         },
         "next": [
             "TapSignDone",
-            "TapSignDone0",
             "TapSignNow0",
             "[JumpBack]TapSignClaimDailyGift",
             "[JumpBack]TapSignNow",
@@ -242,19 +241,6 @@
         },
         "focus": {
             "Node.Recognition.Succeeded": "✅签到成功"
-        },
-        "next": ["StopAPPTaptap"]
-    },
-    "TapSignDone0": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": ["7日签到礼包"],
-                "roi": [110,580,500,250]
-            }
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "🥳七日签到已全部完成"
         },
         "next": ["StopAPPTaptap"]
     }
