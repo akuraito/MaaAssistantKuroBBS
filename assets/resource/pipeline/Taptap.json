@@ -1,6 +1,7 @@
 {
     "Taptap": {
         "next": [
+            "[JumpBack]TapUpdate",
             "[JumpBack]TapSignPageEvent",
             "[JumpBack]TapSearchBar",
             "[JumpBack]TapSearchHome",
@@ -128,6 +129,7 @@
         "next": [
             "TapSignDone",
             "TapSignNow0",
+            "[JumpBack]TapUpdate",
             "[JumpBack]TapSignClaimDailyGift",
             "[JumpBack]TapSignNow",
             "[JumpBack]TapSignPage",
@@ -243,5 +245,21 @@
             "Node.Recognition.Succeeded": "✅签到成功"
         },
         "next": ["StopAPPTaptap"]
+    },
+    "TapUpdate": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["一键安装"],
+                "roi": [108,951,506,81]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true,
+                "target_offset": [216,165,-435,-11]
+            }
+        }
     }
 }
