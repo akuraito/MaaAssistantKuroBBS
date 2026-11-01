@@ -1,0 +1,100 @@
+{
+    "chr_intro": {
+        "next": [
+            "[JumpBack]CI_claim",
+            "[JumpBack]CI_homescreen"
+        ]
+    },
+    "CI_claim": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["宇宙奇趣"],
+                "roi": [319,98,166,49]
+            }
+        },
+        "next": [
+            "CI_claim_0",
+            "[JumpBack]CI_claim_1"
+        ]
+    },
+    "CI_claim_0": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["已领取"],
+                "roi": [1054,298,166,55]
+            }
+        },
+        "max_hit": 1,
+        "next": [
+            "[JumpBack]StopAPPPNS",
+            "StopTask"
+        ]
+    },
+    "StopAPPPNS": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.kurogame.haru.hero"
+            }
+        },
+        "enabled": false,
+        "max_hit": 1
+    },
+    "CI_claim_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["(?<!已)领取"],
+                "roi": [1054,298,166,55]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "CI_homescreen": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["战斗"],
+                "roi": [1060,300,100,70]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [210,400,40,50]
+            }
+        },
+        "next": [
+            "CI_activity",
+            "[JumpBack]CI_activity_find"
+        ]
+    },
+    "CI_activity": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["宇宙奇趣"],
+                "roi": [30,100,230,540]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "CI_activity_find": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [30,100,230,80],
+                "end": [30,560,230,80]
+            }
+        },
+        "max_hit": 5
+    }
+}
