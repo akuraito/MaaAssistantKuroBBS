@@ -15,7 +15,8 @@
         },
         "next": [
             "CI_claim_0",
-            "[JumpBack]CI_claim_1"
+            "[JumpBack]CI_claim_1",
+            "[JumpBack]CI_claim_2"
         ]
     },
     "CI_claim_0": {
@@ -23,7 +24,7 @@
             "type": "OCR",
             "param": {
                 "expected": ["已领取"],
-                "roi": [1054,298,166,55]
+                "roi": [1054,298,166,69]
             }
         },
         "max_hit": 1,
@@ -47,13 +48,28 @@
             "type": "OCR",
             "param": {
                 "expected": ["(?<!已)领取"],
-                "roi": [1054,298,166,55]
+                "roi": [1054,298,166,69]
             }
         },
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "post_delay": 500
+    },
+    "CI_claim_2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ["奖励"],
+                "roi": [627,226,82,48]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 500
     },
     "CI_homescreen": {
         "recognition": {
